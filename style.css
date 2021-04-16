@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+
+main, header, footer, article, section, footer, div, li {
+    border: 1px solid grey;
+    box-sizing: border-box;
+    padding: 10px;
+    background: lightcyan;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    padding: 0;
+}
+
+#tartalom1{                             /* --> section; szülő*/
+    display: grid; 
+    grid-template-areas:
+        "c c c"
+        "d1 d2 d3";
+}
+
+#tartalom1 h1{
+    grid-area: c;
+    
+}
+
+#tartalom1 div:last-child{ /*Gomb*/
+    border: none;
+}
+
+#tartalom1 div:nth-child(2){ /*Div 1*/
+    grid-area: d1;
+    
+}
+#tartalom1 div:nth-child(3){ /*Div 2*/
+    grid-area: d2;
+    
+}
+#tartalom1 div:nth-child(4){ /*Div 3*/
+    grid-area: d3;
+    
+}
+
+
+
+/*Feladatok*/
+
+/*1.	Az utolsó div 1 bekezdésének színét (és hátterét) változtasd meg!*/
+#tartalom1 div:nth-child(4) p:nth-child(1){
+    color: darksalmon;    
+    background-color: beige;
+}
+
+/*2.	Az első  iv első  bekezdésének színét (és hátterét) változtasd meg!*/
+#tartalom1 div:nth-child(2) p:nth-child(1){
+    color: darksalmon;    
+    background-color: beige;
+}
+
+/*3.	az utolsó div háttérszíne legyen sárga.*/
+
+#tartalom1 div:nth-child(4) {       
+    background-color: yellow;
+}
+
+/*4.    Színezd át a második oszlop minden második p tag-jének a betűszínét (és hátterét)*/
+#tartalom1 div:nth-child(3) p:nth-child(even){
+    color: blue;    
+    background-color: lightsalmon;
+}
+
+/*	Változtasd meg a második oszlop 3. bekezdésének betűszínét*/
+#tartalom1 div:nth-child(3) p:nth-child(3){
+    color: red;
+    
+}
+
+.hatter_kurzor{
+    background: blue;
+    cursor: pointer;
+    
+}
+
+.masodik {
+    color: fuchsia;
+    background: pink;
+}
+
+.harmadik{
+    background-color: lightgray;
+    
+}
+
+
+
